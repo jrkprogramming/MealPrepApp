@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <a href="/mealPrep/new">POST A NEW MEAL PREP</a>
+
+
+    <table id="list">
+        <thead>
+          <tr>
+            <th>Meal Name</th>
+            <th>Protein</th>
+            <th>Fat</th>
+            <th>Carbs</th>
+            <th>Calories</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% allMeals.forEach(function(mealPrep) { %>
+            <tr>
+              <td><a href="/mealPrep/<%= mealPrep._id %>"><%= mealPrep.mealName %></a></td>
+              <td><%= mealPrep.protein %></td>
+              <td><%= mealPrep.fat %></td>
+              <td><%= mealPrep.carbs %></td>
+              <td><%= mealPrep.calories %></td>
+
+
+            </tr>
+            <% }); %>
+          </tbody>
+        </table>
+
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+
+[
+    {
+        "mealName" : "20- Minute Chicken and Rice",
+        "image" : "https://media.giphy.com/media/",
+        "notes" : "Now, here’s where it gets tricky and you’ll need to pull out your multitasking skills. While the chicken and rice are cooking, go ahead and steam the broccoli. You can do this on the stove-top in a pot of boiling water or in the microwave.  Now all that’s left is to cut the chicken, spoon out the rice, and assemble the meal prep bowls.",
+        "ingredients" : ["2 cups water", "1 cup jasmine rice"],
+        "instructions" : ["To Cook the Rice:Bring the water to a boil in a medium saucepan. this Stir in the rice; cover and reduce the heat to low. Simmer for 15 minutes until all of the water is absorbed.", "To Cook the chicken: Rub chicken with brown sugar, paprika, cumin, garlic powder, salt, and pepper. Heat 1-2 tablespoons oil in a large heavy-duty pan or skillet over medium-high heat.", "Add the chicken to pan and cook for 5-6 minutes on the first side without moving, until the undersides develop dark grill marks. Flip the chicken breasts using a pair of tongs or a fork and cook the other side for 5-6 minutes. Turn off heat and allow chicken breasts to rest in pan for at least 5 minutes before cutting.", "To steam broccoli: There are two ways to cook the broccoli. To blanch the broccoli on the stove-top. Boil water in a large pot. Add broccoli florets to pot and blanch for just 1 minute. Remove from the pot. To steam in the microwave: Place broccoli in a microwave-safe bowl and add water 3 tablespoons water to the bowl. Cover with a ceramic plate or plastic wrap. Microwave on high for 3 minutes.", "To steam broccoli: There are two ways to cook the broccoli. To blanch the broccoli on the stove-top. Boil water in a large pot. Add broccoli florets to pot and blanch for just 1 minute. Remove from the pot. To steam in the microwave: Place broccoli in a microwave-safe bowl and add water 3 tablespoons water to the bowl. Cover with a ceramic plate or plastic wrap. Microwave on high for 3 minutes.", "To assemble: Cut the chicken into slices or small bite-size pieces. Use a 1 cup measuring cup to evenly spoon 1 cup of rice into each  (4 total) Top the rice with slices chicken and broccoli florets. Cover and refrigerate for you to 4 days. To reheat microwave on high for 2 minutes or until steaming."],
+        "protein" : 26,
+        "fat": 9,
+        "carbs": 41,
+        "calories": 356
+    }
+]
