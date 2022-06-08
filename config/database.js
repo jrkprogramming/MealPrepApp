@@ -1,8 +1,11 @@
 const mongoose = require('mongoose')
 
 //connect to database
-mongoose.connect('mongodb://localhost:27017/mealprepapp', {
-    useNewUrlParser: true
+// 'mongodb://localhost:27017/mealprepapp'
+mongoose.connect(process.env.DATABASE_URL, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    // useCreateIndex: true
 })
 
 const db = mongoose.connection

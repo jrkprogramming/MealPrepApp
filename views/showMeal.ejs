@@ -8,15 +8,47 @@
 </head>
 <body>
     <a href="/mealPrep">Go Back</a>
-    <h2>MEAL NAME: <%=  recipe.mealName  %></h2>
-    <h2>About: <%=  recipe.notes  %></h2>
-    <h2>ingredients: <%=  recipe.ingredients  %></h2>
-    <h2>instructions: <%=  recipe.instructions  %></h2>
+    <h1><%=  recipe.mealName  %></h1>
+    <h2>About:</h2>
+    <%=  recipe.notes  %>
 
-    <h2>protein: <%=  recipe.protein  %></h2>
-    <h2>fat: <%=  recipe.fat  %></h2>
-    <h2>carbs: <%=  recipe.carbs  %></h2>
-    <h2>calories: <%=  recipe.calories  %></h2>
+
+    <ul>
+        <h2>Ingredients:</h2>
+        <% recipe.ingredients.forEach(function(item,index){ %>
+            <li> <%= item %> </li>
+        <% }) %>
+    </ul>
+
+
+
+    <ol>
+        <h2>Instructions:</h2>
+        <% recipe.instructions.forEach(function(item,index){ %>
+            <li> <%= item %> </li>
+        <% }) %>
+    </ol>
+
+
+    <br>
+    <h2>Nutrition Facts:</h2>
+    <h4>Protein: <%=  recipe.protein  %>g</h4>
+    <h4>Fat: <%=  recipe.fat  %>g</h4>
+    <h4>Carbs: <%=  recipe.carbs  %>g</h4>
+    <h4>Total Calories: <%=  recipe.calories  %> kcal</h4>
+
+    <br><br><br><br>
+
+    <form action="/mealPrep/<%= recipe._id %>/edit">
+        <input type="submit" value="EDIT MEAL" />
+    </form>
+
+    <br>
+
+    <form method="POST" action="/mealPrep/<%= recipe._id %>?_method=DELETE">
+        <input type="submit" value="DELETE MEAL">
+    </form>
+
 
 </body>
 </html>

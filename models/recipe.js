@@ -4,12 +4,12 @@ const Schema = mongoose.Schema
 
 const recipeSchema = new Schema ({
 	mealName: String,
+    // Use Multr to upload images
 	image: String,
     notes: String,
     ingredients: [String],
     // instructions should be in an ordered list
 	instructions: [String],
-    // Use Multr to upload images
 	protein: Number,
 	fat: Number,
 	carbs: Number,
