@@ -170,16 +170,28 @@ async function editMealPhoto(req, res) {
     console.log(err);
   }
 }
+// For EJS:
+// async function deleteMeal(req, res) {
+//   try {
+//     let mealPrep = await Recipe.findById(req.params.id);
+//     await cloudinary.uploader.destroy(mealPrep.cloudinary_id);
+//     await mealPrep.remove();
+//     res.redirect("/mealPrep");
+//   } catch (err) {
+//     console.log(err);
+//   }
+// }
 
 async function deleteMeal(req, res) {
-  try {
-    let mealPrep = await Recipe.findById(req.params.id);
-    await cloudinary.uploader.destroy(mealPrep.cloudinary_id);
-    await mealPrep.remove();
-    res.redirect("/mealPrep");
-  } catch (err) {
-    console.log(err);
-  }
+  let { id } = req.params;
+
+  Recipe.findByIdAndDelete(id, (err, delMeal) => {
+    if (err) {
+      res.status(400).json(err);
+      return;
+    }
+    res.json(delMeal);
+  });
 }
 
 // --------------------------------
