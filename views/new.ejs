@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <title>Post a Meal Prep</title>
+  </head>
+  <body>
+    <div class="mx-5">
+      <br />
+
+      <a class="btn btn-outline-primary" href="/mealPrep">Go Back</a>
+
+      <br /><br />
+
+      <h1>Add a Meal Prep</h1>
+
+      <form action="/mealPrep" method="POST" enctype="multipart/form-data">
+        <br /><br />
+        <input
+          class="form-control form-control-lg"
+          type="text"
+          name="mealName"
+          placeholder="Meal Name"
+          aria-label=".form-control-lg example"
+        />
+
+        <br /><br />
+
+        <div>
+          <label for="formFileLg" class="form-label"
+            >Please include a photo of your meal prep!</label
+          >
+          <input
+            class="form-control form-control-lg"
+            id="formFileLg"
+            type="file"
+            name="image"
+          />
+        </div>
+
+        <br /><br />
+
+        <div class="form-floating">
+          <label for="floatingTextarea">About:</label>
+          <textarea
+            class="form-control"
+            placeholder="Write a description of your meal here."
+            id="floatingTextarea"
+            style="height: 100px"
+            name="notes"
+          ></textarea>
+        </div>
+
+        <br /><br />
+
+        <div class="ingredients">
+          <div class="form-floating mb-3">
+            <label for="floatingInput">Ingredients:</label>
+            <input
+              type="text"
+              class="form-control"
+              id="floatingInput"
+              placeholder="Add 1 ingredient. To add another, click the 'ADD ANOTHER INGREDIENT' button."
+              name="ingredients"
+            />
+            <br />
+          </div>
+        </div>
+
+        <div>
+          <button
+            type="button"
+            id="ingreButton"
+            onclick="AddIngredient()"
+            class="btn btn-primary btn-sm"
+          >
+            ADD ANOTHER INGREDIENT
+          </button>
+        </div>
+
+        <br /><br />
+
+        <div class="instructions">
+          Instructions:
+
+          <br />
+
+          <div class="form-floating">
+            <textarea
+              class="form-control"
+              placeholder="Write the steps to your recipe. To add another step, click the 'ADD ANOTHER STEP' button."
+              id="floatingTextarea2"
+              style="height: 100px"
+              name="instructions"
+              type="text"
+            ></textarea>
+
+            <br />
+          </div>
+        </div>
+
+        <div>
+          <button
+            type="button"
+            id="instrucButton"
+            onclick="AddInstruction()"
+            class="btn btn-primary btn-sm"
+          >
+            ADD ANOTHER STEP
+          </button>
+        </div>
+
+        <br /><br />
+
+        Protein: <input name="protein" type="number" style="width: 4em" />g
+
+        <br /><br />
+
+        Fat: <input name="fat" type="number" style="width: 4em" />g
+
+        <br /><br />
+
+        Carbs: <input name="carbs" type="number" style="width: 4em" />g
+
+        <br /><br />
+
+        Calories:
+        <input name="calories" type="number" style="width: 4em" /> kcal
+
+        <br /><br />
+
+        <input
+          class="btn btn-outline-primary"
+          type="submit"
+          value="CREATE MEAL"
+          style="padding: 20px"
+        />
+      </form>
+
+      <script type="text/javascript" src="/dynamic.js"></script>
+    </div>
+  </body>
+</html>
