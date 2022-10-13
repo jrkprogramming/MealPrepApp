@@ -93,8 +93,7 @@ async function createMeal(req, res) {
       // owner: req.user._id,
     });
 
-    // await newMeal.save(() => res.redirect("/mealPrep"));
-    res.json(newMeal);
+    await newMeal.save(() => res.json(newMeal));
   } catch (err) {
     console.log(err);
   }

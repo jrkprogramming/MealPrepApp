@@ -24,7 +24,7 @@
 // }
 
 const User = require("../models/User");
-const Recipe = require("../models/Recipe");
+// const Recipe = require("../models/Recipe");
 const jwt = require("jsonwebtoken");
 const SECRET = process.env.SECRET;
 
